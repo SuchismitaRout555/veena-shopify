@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -5,8 +6,82 @@ body {
 }
 
 .splide {
+    position: relative;
     width: 100%;
 }
+
+.splide__track {
+    position: relative;
+}
+
+.splide__pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 20;
+}
+
+.splide__pagination__page {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.splide__pagination__page.is-active {
+    background: white;
+    width: 12px;
+    height: 12px;
+}
+
+.splide__arrows {
+    display: none; 
+}
+
+.custom-navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 20;
+}
+
+.custom-prev, .custom-next {
+    background: rgba(255,255,255,0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.custom-prev:hover, .custom-next:hover {
+    background: rgba(255,255,255,0.5);
+}
+
+.custom-prev svg, .custom-next svg {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+}
+
+
+
+
+
+
 
 .splide__slide {
     position: relative;
@@ -113,3 +188,4 @@ body {
     background-color: #f0f0f0;
     transform: scale(1.05);
 }
+
