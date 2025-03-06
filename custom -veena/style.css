@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.splide {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.splide__list {
+    display: flex;
+}
+
+.splide__slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.slide-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.6);
+}
+
+.prev-button, .next-button {
+    background: none; 
+    border: none; 
+    width: auto; 
+    height: auto; 
+    font-size: 2em; 
+    color: white; 
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prev-button {
+    left: 43%;
+}
+
+.next-button {
+    right: 43%;
+}
+
+.prev-button:hover, .next-button:hover {
+    background: #ddd;
+}
+.category {
+    display: inline-block;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.8); 
+    align-items: center;
+    gap: 8px;
+}
+
+.category::before {
+    content: "•";
+    font-size: 1.2em;
+}
+
